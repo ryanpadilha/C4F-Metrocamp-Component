@@ -22,9 +22,11 @@ public class CriptografiaFactory implements ICriptografiaService {
 		switch (algoritmo) {
 		case MD5:
 			criptoMessage = new CriptografiaMD5().encriptar(mensagem);
+			System.out.println("criptografia MD5");
 			break;
 		case SHA1:
 			criptoMessage = new CriptografiaSHA1().encriptar(mensagem);
+			System.out.println("criptografia SHA1");
 			break;
 		default:
 			// TODO: implementar comportamento default
