@@ -1,4 +1,4 @@
-package br.edu.metrocamp.service.impl;
+package br.edu.veris.service.impl;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -7,7 +7,7 @@ import java.security.NoSuchAlgorithmException;
 
 import org.junit.Test;
 
-import br.edu.metrocamp.service.AlgoritmoCriptografia;
+import br.edu.veris.service.AlgoritmoCriptografia;
 
 /**
  * Caso de testes do componente de criptografia.
@@ -22,7 +22,7 @@ public class CriptografiaFactoryTest {
 	public void encriptarMD5() throws NoSuchAlgorithmException {
 		String mensagem = "Mensagem a ser criptografada";
 
-		CriptografiaFactory factory = new CriptografiaFactory();
+		CriptografiaFactory factory = CriptografiaFactory.getInstance();
 		String value = factory.encriptar(mensagem, AlgoritmoCriptografia.MD5);
 		assertNotNull(value);
 		assertTrue("e89521c6d3830c2c4b13443989d7b833".equals(value));
@@ -32,7 +32,7 @@ public class CriptografiaFactoryTest {
 	public void encriptarSHA1() throws NoSuchAlgorithmException {
 		String mensagem = "Mensagem a ser criptografada";
 
-		CriptografiaFactory factory = new CriptografiaFactory();
+		CriptografiaFactory factory = CriptografiaFactory.getInstance();
 		String value = factory.encriptar(mensagem, AlgoritmoCriptografia.SHA1);
 		assertNotNull(value);
 		assertTrue("c9c86978889d348435726a503784a35de6c03c01".equals(value));

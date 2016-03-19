@@ -1,11 +1,11 @@
-package br.edu.metrocamp.service.impl;
+package br.edu.veris.service.impl;
 
 import java.security.NoSuchAlgorithmException;
 
-import br.edu.metrocamp.model.CriptografiaMD5;
-import br.edu.metrocamp.model.CriptografiaSHA1;
-import br.edu.metrocamp.service.AlgoritmoCriptografia;
-import br.edu.metrocamp.service.ICriptografiaService;
+import br.edu.veris.model.CriptografiaMD5;
+import br.edu.veris.model.CriptografiaSHA1;
+import br.edu.veris.service.AlgoritmoCriptografia;
+import br.edu.veris.service.ICriptografiaService;
 
 /**
  * Factory de controle de instancias de criptografia
@@ -15,6 +15,19 @@ import br.edu.metrocamp.service.ICriptografiaService;
  *
  */
 public class CriptografiaFactory implements ICriptografiaService {
+
+	private static CriptografiaFactory instance;
+
+	private CriptografiaFactory() {
+	}
+
+	public static CriptografiaFactory getInstance() {
+		if (null == instance) {
+			instance = new CriptografiaFactory();
+		}
+
+		return instance;
+	}
 
 	public String encriptar(String mensagem, AlgoritmoCriptografia algoritmo) throws NoSuchAlgorithmException {
 		String criptoMessage = "";

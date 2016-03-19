@@ -1,4 +1,4 @@
-package br.edu.metrocamp.model;
+package br.edu.veris.model;
 
 import java.security.NoSuchAlgorithmException;
 

@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>br.edu.metrocamp</groupId>
-	<artifactId>metrocamp-criptografia</artifactId>
+	<artifactId>veris-criptografia</artifactId>
 	<version>0.0.1</version>
 	<packaging>jar</packaging>
 
-	<name>metrocamp-criptografia</name>
+	<name>veris-criptografia</name>
 
 	<developers>
 		<developer>

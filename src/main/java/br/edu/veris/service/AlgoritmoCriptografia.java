@@ -1,4 +1,4 @@
-package br.edu.metrocamp.service;
+package br.edu.veris.service;
 
 /**
  * Enumeration de tipo de criptografia.

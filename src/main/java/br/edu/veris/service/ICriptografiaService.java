@@ -1,4 +1,4 @@
-package br.edu.metrocamp.service;
+package br.edu.veris.service;
 
 import java.security.NoSuchAlgorithmException;
 
